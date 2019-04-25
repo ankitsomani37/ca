@@ -9,21 +9,74 @@ output:
 # Homework exercises
 
 - Create two variables and multiply them
+```{r}
+a <- 2
+b <- 3
+print(a*b)
+```
+
 
 - Create a sequence with the first 50 even numbers 
+```{r}
+evenseq <- seq(2, 100, 2)
+print(evenseq)
+```
+
 
 - Install the package tidyverse. Check the description of this package and explain why it is an interesting library.
+```{r}
+install.packages("tidyverse")
+```
+
 
 - Which packages are included in tidyverse?
+```{r}
+tidyverse::tidyverse_packages()
+```
+
 
 - Create a variable called my_variable that contains the word "TRUE". Determine the class of the object my_variable.
+```{r}
+my_variable <- "TRUE"
+class(my_variable)
+```
+
 
 - Transform my_variable as a logical variable. Determine the class of the object my_variable.
+```{r}
+my_variable <- TRUE
+class(my_variable)
+```
+
 
 - Create a vector (called student) to hold the data of student: name, email, intake and nationaly. Access the element with the name “email”
+```{r}
+student <- c(name="Ankit", email="ankit.somani@student.ie.edu", intake="IMBA Sep 2019", nationality="Indian")
+print(student["email"])
+```
+
 
 - Create a dataframe (called students) to the data of several students: name, email, intake and nationaly. Access the element with the name “email”
+```{r}
+name <- c("Rafael", "Messi", "Ronaldo", "Pogba", "Rashford")
+email <- c("rafael@student.ie.edu", "messi@student.ie.edu", "ronaldo@student.ie.edu", "pogba@student.ie.edu", "rashford@student.ie.edu")
+intake <- c("IMBA Sep 2019", "IMBA Sep 2019", "IMBA Sep 2019", "IMBA Sep 2019", "IMBA Sep 2019")
+nationality <- c("Spanish", "Argentinian", "Portuguese", "French", "English")
+students <- data.frame(name, email, intake, nationality)
+print(students["email"])
+```
+
 
 - Create a vector of coefficients, called coeffs, using the sample function. Here, we draw a sample of size 5 from −100, . . . , 100 without replacement
 
+```{r}
+coeffs <- sample(-100:100, 5, replace=FALSE)
+print(coeffs)
+```
+
+
 - Determine the lenght of coeffs
+```{r}
+print(length(coeffs))
+```
+
